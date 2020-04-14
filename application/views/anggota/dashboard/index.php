@@ -40,15 +40,15 @@
 	<div class="row">
 
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="dashboard-stat2 bordered">
+			<div class="dashboard-stat2 bg-blue bg-font-blue">
 				<div class="display">
 					<div class="number">
-						<h3 class="font-green-sharp">
+						<h3>
 							<span data-counter="counterup" data-value="<?=number_format($saldo_simpanan_pokok);?>">0</span>
 						</h3>
-						<small>SALDO SIMPANAN POKOK</small>
+						<small class="bg-font-blue">SALDO SIMPANAN POKOK</small>
 					</div>
-					<div class="icon">
+					<div class="icon bg-font-blue">
 						<i class="fa fa-money"></i>
 					</div>
 				</div>
@@ -56,15 +56,15 @@
 		</div>
 
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="dashboard-stat2 bordered">
+			<div class="dashboard-stat2 bg-red-thunderbird bg-font-red-thunderbird">
 				<div class="display">
 					<div class="number">
-						<h3 class="font-red-haze">
+						<h3>
 							<span data-counter="counterup" data-value="<?=number_format($saldo_simpanan_wajib);?>">0</span>
 						</h3>
-						<small>SALDO SIMPANAN WAJIB</small>
+						<small class="bg-font-red-thunderbird">SALDO SIMPANAN WAJIB</small>
 					</div>
-					<div class="icon">
+					<div class="icon bg-font-red-thunderbird">
 						<i class="fa fa-money"></i>
 					</div>
 				</div>
@@ -72,15 +72,15 @@
 		</div>
 
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="dashboard-stat2 bordered">
+			<div class="dashboard-stat2 bg-green-jungle bg-font-green-jungle">
 				<div class="display">
 					<div class="number">
-						<h3 class="font-blue-sharp">
+						<h3 class="bg-font-green-jungle">
 							<span data-counter="counterup" data-value="<?=number_format($saldo_simpanan_sukarela);?>"></span>
 						</h3>
-						<small>SALDO SIMPANAN SUKARELA</small>
+						<small class="bg-font-green-jungle">SALDO SIMPANAN SUKARELA</small>
 					</div>
-					<div class="icon">
+					<div class="icon bg-font-green-jungle">
 						<i class="fa fa-money"></i>
 					</div>
 				</div>
@@ -104,7 +104,10 @@
 				</thead>
 				<tbody style="font-size:10px !important;">
 					<?php
-					foreach ($data_taber as $key_taber) {
+					if(count($data_taber) == 0){
+						echo '<tr><td colspan="4" class="text-center">Tidak ada data tabungan berencana</td></tr>';
+					}else{
+						foreach ($data_taber as $key_taber) {
 					?>
 					<tr>
 						<td><?=$key_taber->account_saving_no;?></td>
@@ -114,7 +117,10 @@
 							<button type="button" class="btn btn-info btn-sm" onclick="statementTabungan();">Lihat Statement Tabungan</button>
 						</td>
 					</tr>
-				<?php } ?>
+				<?php
+					}
+				}
+				?>
 				</tbody>
 			</table>
 		</div>
@@ -132,7 +138,10 @@
 				</thead>
 				<tbody>
 					<?php
-					foreach ($data_saldo_pembiayaan as $key_pembiayaan) {
+					if(count($data_saldo_pembiayaan) == 0){
+						echo '<tr><td colspan="4" class="text-center">Tidak ada data pembiayaan</td></tr>';
+					}else{
+						foreach ($data_saldo_pembiayaan as $key_pembiayaan) {
 					?>
 					<tr>
 						<td><?=$key_pembiayaan->account_saving_no;?></td>
@@ -142,7 +151,10 @@
 							<button type="button" class="btn btn-info btn-sm" onclick="kartuAngsuran();">Lihat Kartu Angsuran</button>
 						</td>
 					</tr>
-				<?php } ?>
+				<?php
+					}
+				}
+				?>
 				</tbody>
 			</table>
 		</div>

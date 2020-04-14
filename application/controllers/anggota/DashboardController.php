@@ -20,7 +20,7 @@ class DashboardController extends CI_Controller {
 			$data['content'] = 'dashboard/index';
 			$data['vitamin'] = 'anggota_dashboard_vitamin';
 			$data['arrs']    = $this->mcore->get('anggota', '*', ['cif_no' => $sess_cif_no], NULL, 'ASC', NULL,  NULL);
-			$sirkah = json_decode($this->sirkah($sess_cif_no));
+			$sirkah          = json_decode($this->sirkah($sess_cif_no));
 
 			$data['saldo_simpanan_pokok']    = $sirkah->saldo_simpanan_pokok;
 			$data['saldo_simpanan_wajib']    = $sirkah->saldo_simpanan_wajib;
@@ -34,6 +34,9 @@ class DashboardController extends CI_Controller {
 
 	public function sirkah($cif_no)
 	{
+		$data_taber            = [];
+		$data_saldo_pembiayaan = [];
+
 		$ch = curl_init();
 
 		curl_setopt($ch, CURLOPT_URL,"http://app.baytulikhtiar.com/index.php/webservices/get_saldo_anggota_apm");

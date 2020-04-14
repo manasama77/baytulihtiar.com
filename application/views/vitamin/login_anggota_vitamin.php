@@ -16,12 +16,8 @@
 		let cif_no = $('#cif_no').val();
 		if(cif_no.length == 0){
 			alert('Nomor Induk Anggota Tidak boleh kosong');
-		}else if(cif_no.length < 15 || cif_no.length > 15){
-			alert('Format Nomor Induk Anggota salah, silahkan check kembali');
-		}else if(cif_no.length == 15){
-			checkNIASirkah(cif_no);
 		}else{
-			alert('Nothing Happen');
+			checkNIASirkah(cif_no);
 		}
 	}
 

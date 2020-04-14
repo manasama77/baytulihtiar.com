@@ -15,13 +15,13 @@ class Beranda extends CI_Controller {
 
 	public function index()
 	{
-		// $sirkah              = $this->sirkah();
-		$data['anggota']     = 0;
-		$data['outstanding'] = 0;
-		$data['angsuran']    = 0;
-		// $data['anggota']     = $sirkah['get_count_anggota'][0]->count;
-		// $data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
-		// $data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
+		// $data['anggota']     = 0;
+		// $data['outstanding'] = 0;
+		// $data['angsuran']    = 0;
+		$sirkah              = $this->sirkah();
+		$data['anggota']     = $sirkah['get_count_anggota'][0]->count;
+		$data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
+		$data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
 
 		$data['navbar']  = 'navbar1';
 		$data['title']   = 'KSPPS Baytul Ikhtiar | Beranda';

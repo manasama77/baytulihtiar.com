@@ -11,6 +11,7 @@ class LoginAnggotaController extends CI_Controller {
 			$data['title']        = 'Login Anggota KSPPS Baytul Ikhtiar';
 			$data['view']         = 'login_anggota';
 			$data['view_vitamin'] = 'login_anggota_vitamin';
+			$data['xxx'] = sha1('test'.UYAH);
       $this->load->view('login', $data);
     }
   }
@@ -65,7 +66,7 @@ class LoginAnggotaController extends CI_Controller {
   {
   	$url = 'http://app.baytulikhtiar.com/index.php/webservices/get_data_anggota';
 
-		$cif_no = $this->input->get('cif_no');
+		$cif_no = trim($this->input->get('cif_no', TRUE));
 
     //url-ify the data for the POST
 		$field_string = http_build_query(['cif_no' => $cif_no]);
@@ -111,10 +112,10 @@ class LoginAnggotaController extends CI_Controller {
 
   public function register()
   {
-		$cif_no   = $this->input->post('cif_no');
+		$cif_no   = trim($this->input->post('cif_no', TRUE));
 		$nama     = $this->input->post('nama');
 		$majlis   = $this->input->post('majlis');
-		$password = sha1($this->input->post('password', TRUE).UYAH);
+		$password = sha1($this->input->post('new_password1').UYAH);
 		$cur_date = date('Y-m-d H:i:s');
 
 		$data_store = [
@@ -138,11 +139,13 @@ class LoginAnggotaController extends CI_Controller {
   		
   		$this->session->set_userdata( $array );
 			$code = 200;
+			$password_a = $this->input->post('new_password1');
+			$password_b = $password;
 		}else{
 			$code = 500;
 		}
 
-		echo json_encode(compact('code'));
+		echo json_encode(compact('code', 'password_a', 'password_b'));
 		exit;
   }
 

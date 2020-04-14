@@ -73,7 +73,7 @@ class LoginKaryawanController extends CI_Controller {
   {
 		$nik      = $this->input->post('nik');
 		$nama     = $this->input->post('nama');
-		$password = sha1($this->input->post('password', TRUE).UYAH);
+		$password = sha1($this->input->post('new_password1', TRUE).UYAH);
 		$cur_date = date('Y-m-d H:i:s');
 
 		$data_store = [
