@@ -40,29 +40,18 @@ class Beranda extends CI_Controller {
 		$tgl_obj   = new DateTime('now');
 		$curr_date = $tgl_obj->modify('first day of last month');
 
-		// $get_periode  = date('d-m-Y');
-		// $exp_bulans   = explode('-', $get_periode);
-		// $exp_tahuns   = explode('-', $exp_bulans[2]);
-		// $get_bulan    = $exp_bulans[1] - 1;
-		// $post_tanggal = $exp_tahuns[0].'-'.$get_bulan.'-'.'1';
-
 		$fields['from_date'] = $curr_date->format('Y-m-d');
-    //url-ify the data for the POST
 		$field_string = http_build_query($fields);
 
-    //open connection
 		$ch = curl_init();
 
-    //set the url, number of POST vars, POST data
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_POST, count($field_string));
+		curl_setopt($ch, CURLOPT_POST, $field_string);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $field_string);
 		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
 
-    //execute post
 		$content = curl_exec($ch);
-    //close connection
 		curl_close($ch);
 		$ret = json_decode($content);
 

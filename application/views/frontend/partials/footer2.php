@@ -1,6 +1,7 @@
 <footer class="page-footer orange darken-3">
 	<div class="container-fluid">
 		<div class="row">
+
 			<div class="col s2 m2 center">
 				<img src="<?=base_url();?>assets/img/logo_bm_sm.png" width="100px" class="responsive-img" style="margin-left:15px;" />
 			</div>
@@ -35,6 +36,7 @@
 					</body>
 				</table>
 			</div>
+			
 		</div>
 	</div>
 	<div class="footer-copyright" style="height:40px !important; min-height:40px !important;">

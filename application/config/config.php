@@ -26,9 +26,6 @@ ini_set('memory_limit','2048M');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $root               = "http://".$_SERVER['HTTP_HOST'];
-// $root               .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-// $config['base_url'] = "$root";
 $config['base_url'] = 'http://localhost/git/dev.baytulikhtiar.com/';
 
 /*
