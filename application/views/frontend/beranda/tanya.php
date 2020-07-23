@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="center">
-					<img src="<?=base_url();?>assets/img/tanya baik 2.png" class="responsive-img">
+					<img src="<?=base_url();?>assets/img/tanya baik 2.png" class="responsive-img" style="max-width: 170px !important;">
 				</div>
 			</div>
 		</div>

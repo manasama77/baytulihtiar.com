@@ -1,5 +1,5 @@
 <div class="container-fluid" style="margin-top:10px;">
-	<div class="parallax-container white-text text-shadow" style="height:150px;">
+	<div class="parallax-container white-text text-shadow" style="height:120px;">
 		<div class="parallax"><img src="<?=base_url();?>assets/img/parallax/22032012198.jpg" width="1000px"></div>
 		<div class="section">
 			<div class="row">

@@ -2,10 +2,10 @@
 	<a id="mitrabaik" class="section scrollspy"></a>
 	<div class="divider"></div>
 	<div class="center">
-		<img src="<?=base_url();?>assets/img/mitra baik 2.png" class="responsive-img">
+		<img src="<?=base_url();?>assets/img/mitra baik 2.png" class="responsive-img" style="max-width: 170px !important;">
 	</div>
-	<div class="parallax-container" style="height:200px;">
-		<div class="carousel" id="carousel2" style="margin-top:-70px;">
+	<div class="parallax-container" style="height:120px;">
+		<div class="carousel" id="carousel2" style="margin-top:-100px;">
 			<a class="carousel-item" href="#"><img src="<?=base_url();?>assets/img/mitra/logo_1.png" class="responsive-img"></a>
 			<a class="carousel-item" href="#"><img src="<?=base_url();?>assets/img/mitra/logo_2.png" class="responsive-img"></a>
 			<a class="carousel-item" href="#"><img src="<?=base_url();?>assets/img/mitra/logo_3.png" class="responsive-img"></a>

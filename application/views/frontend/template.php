@@ -7,7 +7,7 @@
 	<meta name="author" content="AdamPM">
 	<link rel="icon" href="<?=base_url('favicon.ico');?>">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="<?=base_url();?>vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="<?=base_url();?>vendor/materialize/css/materialize.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/pace.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/main.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="<?=base_url();?>vendor/toast/jquery.toast.min.css"  media="screen,projection"/>
@@ -25,10 +25,7 @@
 	<?php $this->load->view('frontend/partials/footer1'); ?>
 
 	<!--JavaScript at end of body for optimized loading-->
-	<script
-	src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
+	<script src="<?=base_url();?>vendor/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/fontawesome/js/all.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/pace/pace.min.js"></script>

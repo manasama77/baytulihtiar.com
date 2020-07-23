@@ -6,7 +6,7 @@
 			<div class="col s12">
 				<div class="center">
 					<a href="<?=base_url('kenal');?>">
-						<img src="<?=base_url();?>assets/img/kenal baik 2.png" class="responsive-img">
+						<img src="<?=base_url();?>assets/img/kenal baik 2.png" class="responsive-img" style="max-width: 170px !important;">
 					</a>
 				</div>
 			</div>

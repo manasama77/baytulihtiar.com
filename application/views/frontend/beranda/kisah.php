@@ -5,7 +5,7 @@
 			<div class="col s12">
 				<div class="center">
 					<a href="<?=site_url('kisah');?>">
-						<img src="<?=base_url();?>assets/img/kisah baik 2.png" class="responsive-img">
+						<img src="<?=base_url();?>assets/img/kisah baik 2.png" class="responsive-img" style="max-width: 170px !important;">
 					</a>
 				</div>
 			</div>
