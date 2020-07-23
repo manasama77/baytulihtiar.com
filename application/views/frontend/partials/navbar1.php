@@ -16,7 +16,8 @@
 					<li><a href="<?=base_url('bm');?>" target="_blank" class="waves-effect waves-light black-text">Baytul Maal BAIK</a></li>
 					<li>
 						<a class="dropdown-trigger waves-effect waves-light black-text" href="#!" data-target="dropdown_login">
-							Login <i class="material-icons right">arrow_drop_down</i>
+							<!-- Login <i class="material-icons right">arrow_drop_down</i> -->
+							Login <i class="fas fa-caret-down"></i>
 						</a>
 					</li>
 				</ul>

@@ -1,4 +1,4 @@
-<div class="container-fluid grey lighten-5">
+<div class="container-fluid grey lighten-5" style="background-image: url('<?=base_url();?>assets/img/berita/patternng.png');">
 	<a id="beritabaik" class="section scrollspy"></a>
 	<div class="divider"></div>
 	<div class="section">
@@ -19,9 +19,12 @@
 			</div>
 		<?php }else{ ?>
 			<div class="row">
-				<?php foreach ($beritas->result() as $berita) { ?>
-					<div class="col s12 m4 l4 center">
+				<div class="col m8 l8 offset-m2 offset-l2">
+					<div class="row">
+						<?php foreach ($beritas->result() as $berita) { ?>
+							<div class="col s12 m4 l4 center-align">
 
+<<<<<<< HEAD
 						<div class="card berita hoverable scale-transition scale-out blue-grey lighten-2">
 							<div class="card-image waves-effect waves-block waves-light">
 								<img class="activator responsive-img center-align" src="<?=base_url();?>assets/img/berita/<?=$berita->gambar;?>" style="min-width:408px !important; min-height: 250px !important; max-width:4085px !important; max-height: 250px !important;">
@@ -40,9 +43,34 @@
 								</a>
 							</div>
 						</div>
+=======
+								<!-- <div class="card berita hoverable scale-transition scale-out blue-grey lighten-2 center-align"> -->
+								<div class="card berita">
+									<!-- <div class="card-image waves-effect waves-block waves-light center-align"> -->
+									<div class="card-image">
+										<img class="activator center-align" src="<?=base_url();?>assets/img/berita/<?=$berita->gambar;?>" style="height:180px;">
+										<a href="<?=site_url('berita/show/'.$berita->id);?>" class="white-text">
+											<span class="card-title waves-effect waves-light" style="background-color: rgb(96,125,139,0.8); font-size:16px; padding:8px; width:100%;"><?=$berita->judul;?>
+											</span>
+										</a>
+									</div>
+									<div class="card-reveal left-align" style="background-image: url('<?=base_url();?>assets/img/berita/patternng.png');">
+										<!-- <span class="card-title grey-text text-darken-4 right-align btn-small red right hoverable" style="font-size:14px;"> -->
+										<span class="card-title grey-text text-darken-4" style="font-size:16px; font-weight: bold;">
+											<?=$berita->judul;?>
+										</span>
+										<a href="<?=site_url('berita/show/'.$berita->id);?>" class="black-text">
+											<!-- <p class="text-justify" style="font-size:13px;"><?=mb_strimwidth(trim($berita->isi), 0, 250, "&hellip;");?></p> -->
+											<p class="flow-text" style="font-size:13px;"><?=mb_strimwidth(trim($berita->isi), 0, 250, "&hellip;");?></p>
+										</a>
+									</div>
+								</div>
+>>>>>>> a4df1f1c0048ab874acf3053a9f0f513765ea10f
 
+							</div>
+						<?php } ?>
 					</div>
-				<?php } ?>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col s12 center">

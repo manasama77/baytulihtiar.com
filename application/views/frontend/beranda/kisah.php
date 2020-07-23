@@ -18,52 +18,56 @@
 					</div>
 				</div>
 			<?php }else{ ?>
-				<div class="col s12 l7">
-					<div class="video-container scale-transition scale-out hoverable" style="margin-bottom: 20px;">
-						<iframe id="h_video" width="560" height="315" src="https://www.youtube.com/embed/<?=$kisahs->result()[0]->video;?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<h5 class="scale-transition scale-out">
-						<i class="fab fa-youtube fa-fw red-text"></i> 
-						<span id="h_judul">
-							<div class="progress" style="display:none;">
-								<div class="indeterminate"></div>
-							</div>
-							<span id="h_judulx" style="display:none;"><strong><?=$kisahs->result()[0]->judul;?></strong></span>
-						</span>
-					</h5>
-				</div>
-				<div class="col s12 l4 offset-l1 left">
+				<div class="col m8 l8 offset-m2 offset-l2">
 					<div class="row">
-						<?php 
-						foreach ($kisahs->result() as $kisah) {
-							if($kisah->id_admin != NULL){
-								$created_name = $kisah->nama_admin;
-								$created_date = $kisah->date_admin;
-							}else{
-								$created_name = $kisah->nama_karyawan;
-								$created_date = $kisah->date_karyawan;
-							}
-						?>
-							<div class="col s12">
-								<div class="card horizontal hoverable waves-effect waves-yellow" onclick="changeVideo('<?=$kisah->judul;?>', '<?=$kisah->video;?>');">
-									<div class="card-image" style="max-width:200px;">
-										<img src="http://img.youtube.com/vi/<?=$kisah->video;?>/mqdefault.jpg" width="150px">
+						<div class="col s12 l6">
+							<div class="video-container scale-transition scale-out hoverable" style="margin-bottom: 20px;">
+								<iframe id="h_video" width="600px" height="337.5px" src="https://www.youtube.com/embed/<?=$kisahs->result()[0]->video;?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<h5 class="scale-transition scale-out">
+								<i class="fab fa-youtube fa-fw red-text"></i> 
+								<span id="h_judul">
+									<div class="progress" style="display:none;">
+										<div class="indeterminate"></div>
 									</div>
-									<div class="card-stacked">
-										<div class="card-content" style="padding:5px !important;">
-											<p><?=$kisah->judul;?><br>
-												<small class="grey-text">
-													<i class="fas fa-user"></i> <?=$created_name;?><br>
-													<i class="fas fa-calendar-alt"></i> <?=$created_date;?><br>
-												</small>
-											</p>
+									<span id="h_judulx" style="display:none;"><strong><?=$kisahs->result()[0]->judul;?></strong></span>
+								</span>
+							</h5>
+						</div>
+						<div class="col s12 l5 offset-l1 left">
+							<div class="row">
+								<?php 
+								foreach ($kisahs->result() as $kisah) {
+									if($kisah->id_admin != NULL){
+										$created_name = $kisah->nama_admin;
+										$created_date = $kisah->date_admin;
+									}else{
+										$created_name = $kisah->nama_karyawan;
+										$created_date = $kisah->date_karyawan;
+									}
+								?>
+									<div class="col s12">
+										<div class="card horizontal hoverable waves-effect waves-yellow" onclick="changeVideo('<?=$kisah->judul;?>', '<?=$kisah->video;?>');">
+											<div class="card-image valign-wrapper center-align" style="max-width:135px;">
+												<img src="https://img.youtube.com/vi/<?=$kisah->video;?>/mqdefault.jpg" width="150px">
+											</div>
+											<div class="card-stacked">
+												<div class="card-content" style="padding:5px !important;">
+													<p><?=$kisah->judul;?><br>
+														<small class="grey-text">
+															<i class="fas fa-user"></i> <?=$created_name;?><br>
+															<i class="fas fa-calendar-alt"></i> <?=$created_date;?><br>
+														</small>
+													</p>
+												</div>
+											</div>
 										</div>
 									</div>
+								<?php } ?>
+								<div class="col s12">
+									<a href="<?=site_url('kisah');?>" class="waves-effect waves-light btn green darken-3 hoverable">Kisah Lainnya <i class="material-icons right">more</i></a>
 								</div>
 							</div>
-						<?php } ?>
-						<div class="col s12">
-							<a href="<?=site_url('kisah');?>" class="waves-effect waves-light btn green darken-3 hoverable">Kisah Lainnya <i class="material-icons right">more</i></a>
 						</div>
 					</div>
 				</div>
