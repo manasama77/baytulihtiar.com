@@ -1,12 +1,7 @@
 <div class="container-fluid" style="margin-top:10px;">
 	<div class="parallax-container white-text text-shadow" style="height:120px;">
-<<<<<<< HEAD
 		<div class="parallax"><img src="<?=base_url();?>assets/img/parallax/22032012198.jpg" width="1000px"></div>
 		<div class="section">
-=======
-		<div class="parallax"><img src="<?=base_url();?>assets/img/parallax/para.jpg" width="1280px"></div>
-		<div class="section" style="margin-top: 10px;">
->>>>>>> a4df1f1c0048ab874acf3053a9f0f513765ea10f
 			<div class="row">
 				<div class="col s4">
 					<div class="center scale scale-transition scale-out">

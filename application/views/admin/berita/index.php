@@ -1,6 +1,4 @@
 <div class="page-content">
-	<!-- BEGIN PAGE HEADER-->
-	<!-- BEGIN PAGE BAR -->
 	<div class="page-bar">
 		<ul class="page-breadcrumb">
 			<li>
@@ -15,13 +13,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- END PAGE BAR -->
-	<!-- BEGIN PAGE TITLE-->
 	<h1 class="page-title"> Berita <i class="fa fa-fw fa-angle-right"></i>
 		<small>List Berita</small>
 	</h1>
-	<!-- END PAGE TITLE-->
-	<!-- END PAGE HEADER-->
 	
 	<div class="row">
 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">

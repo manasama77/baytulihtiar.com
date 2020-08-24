@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- BEGIN LOGO -->
 		<div class="logo">
 			<a href="<?=base_url('/');?>">
-				<img src="<?=base_url();?>assets/img/baik_logo3.png" style="min-height: 17px;" alt="LOGO BAIK" /> </a>
+				<img src="<?=base_url();?>assets/img/baik_logo1.png" style="min-height: 17px;" alt="LOGO BAIK" /> </a>
 			</div>
 			<!-- END LOGO -->
 			<!-- BEGIN LOGIN -->

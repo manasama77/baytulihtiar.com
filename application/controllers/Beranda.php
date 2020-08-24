@@ -15,21 +15,22 @@ class Beranda extends CI_Controller {
 
 	public function index()
 	{
-		// $data['anggota']     = 0;
-		// $data['outstanding'] = 0;
-		// $data['angsuran']    = 0;
-		$sirkah              = $this->sirkah();
-		$data['anggota']     = $sirkah['get_count_anggota'][0]->count;
-		$data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
-		$data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
+		$data['anggota']     = 0;
+		$data['outstanding'] = 0;
+		$data['angsuran']    = 0;
+		// $sirkah              = $this->sirkah();
+		// $data['anggota']     = $sirkah['get_count_anggota'][0]->count;
+		// $data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
+		// $data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
 
-		$data['navbar']  = 'navbar1';
-		$data['title']   = 'KSPPS Baytul Ikhtiar | Beranda';
-		$data['content'] = 'beranda/main';
-		$data['vitamin'] = 'beranda/vitamin';
-		$data['beritas'] = $this->mcore->get('berita', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 6, NULL);
-		$data['kisahs']  = $this->mcore->get('kisah', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 3, NULL);
-		$data['kenals']  = $this->mcore->get('profile', '*', NULL,  'id', 'ASC', 3, NULL);
+    $data['navbar']     = 'navbar1';
+    $data['title']      = 'KSPPS Baytul Ikhtiar | Beranda';
+    $data['content']    = 'beranda/main';
+    $data['vitamin']    = 'beranda/vitamin';
+    $data['beritas']    = $this->mcore->get('berita', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 6, NULL);
+    $data['kisahs']     = $this->mcore->get('kisah', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 3, NULL);
+    $data['kenals']     = $this->mcore->get('profile', '*', NULL,  'id', 'ASC', 3, NULL);
+    $data['slideshows'] = $this->mcore->get('slideshow', '*', NULL,  'id', 'DESC', NULL, NULL);
 		$this->_template($data);
 	}
 

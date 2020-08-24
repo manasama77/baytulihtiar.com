@@ -1,6 +1,4 @@
 <div class="page-content">
-	<!-- BEGIN PAGE HEADER-->
-	<!-- BEGIN PAGE BAR -->
 	<div class="page-bar">
 		<ul class="page-breadcrumb">
 			<li>
@@ -15,13 +13,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- END PAGE BAR -->
-	<!-- BEGIN PAGE TITLE-->
 	<h1 class="page-title"> Berita <i class="fa fa-fw fa-angle-right"></i>
 		<small>Tambah Berita</small>
 	</h1>
-	<!-- END PAGE TITLE-->
-	<!-- END PAGE HEADER-->
 	
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -31,14 +25,6 @@
 					<div class="caption">
 						<i class="fa fa-table"></i>Form Tambah Berita 
 					</div>
-					<!-- <div class="actions">
-						<a href="javascript:;" class="btn btn-default btn-sm">
-							<i class="fa fa-pencil"></i> Edit 
-						</a>
-						<a href="javascript:;" class="btn btn-default btn-sm">
-							<i class="fa fa-plus"></i> Add 
-						</a>
-					</div> -->
 				</div>
 				<div class="portlet-body">
 					<form id="form" enctype="multipart/form-data">
@@ -48,7 +34,7 @@
 						</div>
             <div class="form-group">
             	<label for="summernote_1">Isi</label>
-            	<textarea name="isi" id="summernote_1" required></textarea>
+            	<textarea name="isi" required></textarea>
             </div>
             <div class="form-group">
             	<label for="gambar">Gambar</label>

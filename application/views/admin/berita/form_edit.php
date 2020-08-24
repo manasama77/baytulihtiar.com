@@ -1,6 +1,4 @@
 <div class="page-content">
-	<!-- BEGIN PAGE HEADER-->
-	<!-- BEGIN PAGE BAR -->
 	<div class="page-bar">
 		<ul class="page-breadcrumb">
 			<li>
@@ -15,13 +13,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- END PAGE BAR -->
-	<!-- BEGIN PAGE TITLE-->
 	<h1 class="page-title"> Berita <i class="fa fa-fw fa-angle-right"></i>
 		<small>Edit Berita</small>
 	</h1>
-	<!-- END PAGE TITLE-->
-	<!-- END PAGE HEADER-->
 	
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -39,8 +33,8 @@
 							<input type="text" class="form-control" id="judul" name="judul" value="<?=$judul_berita;?>" required autofocus>
 						</div>
             <div class="form-group">
-            	<label for="summernote_1">Isi</label>
-            	<textarea name="isi" id="summernote_1" required><?=$isi_berita;?></textarea>
+            	<label for="isi">Isi</label>
+            	<textarea id="isi" name="isi" required><?=$isi_berita;?></textarea>
             </div>
             <div class="form-group">
             	<label for="gambar">Gambar</label>

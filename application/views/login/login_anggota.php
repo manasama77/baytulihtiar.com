@@ -1,7 +1,7 @@
 <form id="formlogin">
-	<div class="form-title">
-		<span class="form-title">Login Anggota</span>
-		<span class="form-subtitle">KSPPS Baytul Ikhtiar</span>
+	<div class="form-title text-center" style="margin-top: -20px !important;">
+		<span class="form-subtitle" style="font-size: 22px;"><b>KSPPS Baytul Ikhtiar</b></span><br>
+		<span class="form-title">LOGIN</span>
 	</div>
 	<div class="alert alert-danger display-hide">
 		<button class="close" data-close="alert"></button>
@@ -41,7 +41,7 @@
 		<button type="button" id="check" class="btn red btn-block uppercase">Next</button>
 		<button type="button" id="login" class="btn red btn-block uppercase" style="display:none;">Login</button>
 		<button type="button" id="regis" class="btn red btn-block uppercase" style="display:none;">Login</button>
-		<a href="<?=site_url('/');?>" class="btn btn-secondary btn-user btn-block">
+		<a href="<?=site_url('/');?>" class="btn default btn-user btn-block" style="color: #000 !important;">
 			<i class="fa fa-home"></i> Kembali Ke Beranda
 		</a>
 	</div>

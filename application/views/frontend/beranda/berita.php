@@ -24,26 +24,7 @@
 						<?php foreach ($beritas->result() as $berita) { ?>
 							<div class="col s12 m4 l4 center-align">
 
-<<<<<<< HEAD
-						<div class="card berita hoverable scale-transition scale-out blue-grey lighten-2">
-							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator responsive-img center-align" src="<?=base_url();?>assets/img/berita/<?=$berita->gambar;?>" style="min-width:408px !important; min-height: 250px !important; max-width:4085px !important; max-height: 250px !important;">
-								<a href="<?=site_url('berita/show/'.$berita->id);?>" class="white-text">
-									<span class="card-title waves-effect waves-light" style="background-color: rgb(96,125,139,0.8); font-size:16px; padding:8px; width:100%;"><?=$berita->judul;?>
-									</span>
-								</a>
-							</div>
-							<div class="card-reveal left-align">
-								<span class="card-title right-align btn-small red right hoverable">
-									<i class="material-icons">arrow_drop_down</i>
-								</span>
-								<a href="<?=site_url('berita/show/'.$berita->id);?>" class="black-text">
-									<span class="card-title" style="font-size:18px;"><?=$berita->judul;?></span>
-									<p class="text-justify"><?=mb_strimwidth(trim($berita->isi), 0, 250, "&hellip;");?></p>
-								</a>
-							</div>
-						</div>
-=======
+
 								<!-- <div class="card berita hoverable scale-transition scale-out blue-grey lighten-2 center-align"> -->
 								<div class="card berita">
 									<!-- <div class="card-image waves-effect waves-block waves-light center-align"> -->
@@ -65,7 +46,6 @@
 										</a>
 									</div>
 								</div>
->>>>>>> a4df1f1c0048ab874acf3053a9f0f513765ea10f
 
 							</div>
 						<?php } ?>

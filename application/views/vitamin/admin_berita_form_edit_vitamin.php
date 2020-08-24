@@ -1,4 +1,4 @@
-
+<script src="https://cdn.tiny.cloud/1/y1lbyegpvnufywjd7k7c8p0drp9rfup9gymycg4n6evr6nfs/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
 	$(document).ready(function(){    
     // FORM VALIDATE
@@ -71,5 +71,13 @@
     		});
     	}
     });
+  });
+</script>
+
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+    toolbar_mode: 'floating',
   });
 </script>

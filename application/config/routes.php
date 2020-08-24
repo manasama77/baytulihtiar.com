@@ -69,6 +69,17 @@ $route['backend/profile/update']['post']     = 'backend/ProfileController/update
 $route['backend/bukutamu/index'] = 'backend/BukuTamuController/index';
 
 #########################################################################################################
+# admin slideshow
+$route['backend/slide/index']['get']              = 'backend/SlideController/index';
+$route['backend/slide/store']['post']             = 'backend/SlideController/store';
+$route['backend/slide/edit/(:num)']['get']        = 'backend/SlideController/edit/$1';
+$route['backend/slide/update']['post']            = 'backend/SlideController/update';
+$route['backend/slide/destroy/(:num)']['get']     = 'backend/SlideController/destroy/$1';
+$route['backend/slide/flag/(:num)/(:num)']['get'] = 'backend/SlideController/flag/$1/$2';
+$route['backend/slide/check/(:any)']['get']       = 'backend/SlideController/check/$1';
+$route['backend/slide/reset']['post']             = 'backend/SlideController/reset';
+
+#########################################################################################################
 # admin manage account
 // admin
 $route['backend/admin/index']['get']              = 'backend/AdminController/index';

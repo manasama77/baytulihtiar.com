@@ -89,6 +89,15 @@
 					<span class="title">List Buku Tamu</span>
 				</a>
 			</li>
+      <li class="heading">
+        <h3 class="uppercase">Manage Slide Show</h3>
+      </li>
+      <li class="nav-item">
+        <a href="<?=site_url('backend/slide/index');?>" class="nav-link">
+          <i class="fa fa-fw fa-users"></i>
+          <span class="title">Slide Show</span>
+        </a>
+      </li>
 			<li class="heading">
 				<h3 class="uppercase">Manage Account</h3>
 			</li>
