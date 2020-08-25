@@ -20,8 +20,8 @@
 				</div>
 			</li>
 			<!-- END SIDEBAR TOGGLER BUTTON -->
-			<li class="nav-item start <?=($uri2 == 'dashboard')? 'active' :'';?>">
-				<a href="<?=base_url('backend/dashboard');?>" class="nav-link nav-toggle">
+			<li class="nav-item start <?= ($uri2 == 'dashboard') ? 'active' : ''; ?>">
+				<a href="<?= base_url('backend/dashboard'); ?>" class="nav-link nav-toggle">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard </span>
 				</a>
@@ -29,20 +29,20 @@
 			<li class="heading">
 				<h3 class="uppercase">Berita</h3>
 			</li>
-			<li class="nav-item <?=($uri2 == 'berita')? 'active' :'';?>">
+			<li class="nav-item <?= ($uri2 == 'berita') ? 'active' : ''; ?>">
 				<a href="javascript:;" class="nav-link nav-toggle">
 					<i class="fa fa-fw fa-newspaper-o"></i>
 					<span class="title">Manage Berita</span>
 					<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
-					<li class="nav-item <?=($uri2 == 'berita' && $uri3 == 'create')? 'active' :'';?>">
-						<a href="<?=site_url();?>backend/berita/create" class="nav-link ">
+					<li class="nav-item <?= ($uri2 == 'berita' && $uri3 == 'create') ? 'active' : ''; ?>">
+						<a href="<?= site_url(); ?>backend/berita/create" class="nav-link ">
 							<span class="title">Tambah Berita</span>
 						</a>
 					</li>
-					<li class="nav-item <?=($uri2 == 'berita' && $uri3 == 'index')? 'active' :'';?>">
-						<a href="<?=site_url();?>backend/berita/index" class="nav-link ">
+					<li class="nav-item <?= ($uri2 == 'berita' && $uri3 == 'index') ? 'active' : ''; ?>">
+						<a href="<?= site_url(); ?>backend/berita/index?status_filter=semua&admin_karyawan_filter=semua&tipe_filter=judul&kata_filter=&filter=" class="nav-link ">
 							<span class="title">List Berita</span>
 						</a>
 					</li>
@@ -60,12 +60,12 @@
 				</a>
 				<ul class="sub-menu">
 					<li class="nav-item  ">
-						<a href="<?=site_url();?>backend/kisah/create" class="nav-link ">
+						<a href="<?= site_url(); ?>backend/kisah/create" class="nav-link ">
 							<span class="title">Tambah Kisah</span>
 						</a>
 					</li>
 					<li class="nav-item  ">
-						<a href="<?=site_url();?>backend/kisah/index" class="nav-link ">
+						<a href="<?= site_url(); ?>backend/kisah/index" class="nav-link ">
 							<span class="title">List Kisah</span>
 						</a>
 					</li>
@@ -75,7 +75,7 @@
 				<h3 class="uppercase">Profile</h3>
 			</li>
 			<li class="nav-item">
-				<a href="<?=site_url('backend/profile/index');?>" class="nav-link">
+				<a href="<?= site_url('backend/profile/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-table"></i>
 					<span class="title">Manage Profile</span>
 				</a>
@@ -84,37 +84,37 @@
 				<h3 class="uppercase">Buku Tamu</h3>
 			</li>
 			<li class="nav-item">
-				<a href="<?=site_url('backend/bukutamu/index');?>" class="nav-link">
+				<a href="<?= site_url('backend/bukutamu/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-table"></i>
 					<span class="title">List Buku Tamu</span>
 				</a>
 			</li>
-      <li class="heading">
-        <h3 class="uppercase">Manage Slide Show</h3>
-      </li>
-      <li class="nav-item">
-        <a href="<?=site_url('backend/slide/index');?>" class="nav-link">
-          <i class="fa fa-fw fa-users"></i>
-          <span class="title">Slide Show</span>
-        </a>
-      </li>
+			<li class="heading">
+				<h3 class="uppercase">Manage Slide Show</h3>
+			</li>
+			<li class="nav-item">
+				<a href="<?= site_url('backend/slide/index'); ?>" class="nav-link">
+					<i class="fa fa-fw fa-users"></i>
+					<span class="title">Slide Show</span>
+				</a>
+			</li>
 			<li class="heading">
 				<h3 class="uppercase">Manage Account</h3>
 			</li>
 			<li class="nav-item">
-				<a href="<?=site_url('backend/admin/index');?>" class="nav-link">
+				<a href="<?= site_url('backend/admin/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-users"></i>
 					<span class="title">Admin</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?=site_url('backend/karyawan/index');?>" class="nav-link">
+				<a href="<?= site_url('backend/karyawan/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-users"></i>
 					<span class="title">Karyawan</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?=site_url('backend/anggota/index');?>" class="nav-link">
+				<a href="<?= site_url('backend/anggota/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-users"></i>
 					<span class="title">Anggota</span>
 				</a>

@@ -8,7 +8,7 @@
 		<span> Masukan No Anggota & Password </span>
 	</div>
 	<?php
-	if ($this->session->flashdata('logout')){
+	if ($this->session->flashdata('logout')) {
 		echo '
 		<div class="alert alert-success">
 		<button class="close" data-close="alert"></button>
@@ -18,9 +18,8 @@
 	}
 	?>
 	<div class="form-group">
-		<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 		<label class="control-label visible-ie8 visible-ie9" for="cif_no">No Anggota</label>
-		<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Nomor Induk Anggota" id="cif_no" name="cif_no" />
+		<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Nomor Induk Anggota" id="cif_no" name="cif_no" autofocus />
 	</div>
 	<div class="form-group password_group" style="display:none;">
 		<label class="control-label visible-ie8 visible-ie9" for="password">Password</label>
@@ -41,7 +40,7 @@
 		<button type="button" id="check" class="btn red btn-block uppercase">Next</button>
 		<button type="button" id="login" class="btn red btn-block uppercase" style="display:none;">Login</button>
 		<button type="button" id="regis" class="btn red btn-block uppercase" style="display:none;">Login</button>
-		<a href="<?=site_url('/');?>" class="btn default btn-user btn-block" style="color: #000 !important;">
+		<a href="<?= site_url('/'); ?>" class="btn default btn-user btn-block" style="color: #000 !important;">
 			<i class="fa fa-home"></i> Kembali Ke Beranda
 		</a>
 	</div>

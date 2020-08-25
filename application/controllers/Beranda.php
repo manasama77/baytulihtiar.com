@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Beranda extends CI_Controller {
+class Beranda extends CI_Controller
+{
 
 	public function __construct()
 	{
@@ -15,22 +16,22 @@ class Beranda extends CI_Controller {
 
 	public function index()
 	{
-		$data['anggota']     = 0;
-		$data['outstanding'] = 0;
-		$data['angsuran']    = 0;
-		// $sirkah              = $this->sirkah();
-		// $data['anggota']     = $sirkah['get_count_anggota'][0]->count;
-		// $data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
-		// $data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
+		// $data['anggota']     = 0;
+		// $data['outstanding'] = 0;
+		// $data['angsuran']    = 0;
+		$sirkah              = $this->sirkah();
+		$data['anggota']     = $sirkah['get_count_anggota'][0]->count;
+		$data['outstanding'] = $sirkah['get_outstanding'][0]->sum / 1000000;
+		$data['angsuran']    = ($sirkah['get_count_par_lancar'][0]->count / $sirkah['get_count_par_all'][0]->count) * 100;
 
-    $data['navbar']     = 'navbar1';
-    $data['title']      = 'KSPPS Baytul Ikhtiar | Beranda';
-    $data['content']    = 'beranda/main';
-    $data['vitamin']    = 'beranda/vitamin';
-    $data['beritas']    = $this->mcore->get('berita', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 6, NULL);
-    $data['kisahs']     = $this->mcore->get('kisah', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 3, NULL);
-    $data['kenals']     = $this->mcore->get('profile', '*', NULL,  'id', 'ASC', 3, NULL);
-    $data['slideshows'] = $this->mcore->get('slideshow', '*', NULL,  'id', 'DESC', NULL, NULL);
+		$data['navbar']     = 'navbar1';
+		$data['title']      = 'KSPPS Baytul Ikhtiar | Beranda';
+		$data['content']    = 'beranda/main';
+		$data['vitamin']    = 'beranda/vitamin';
+		$data['beritas']    = $this->mcore->get('berita', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 6, NULL);
+		$data['kisahs']     = $this->mcore->get('kisah', '*', ['flag_aktif' => 'aktif'], 'id', 'DESC', 3, NULL);
+		$data['kenals']     = $this->mcore->get('profile', '*', NULL,  'id', 'ASC', 3, NULL);
+		$data['slideshows'] = $this->mcore->get('slideshow', '*', NULL,  'id', 'DESC', NULL, NULL);
 		$this->_template($data);
 	}
 
@@ -50,7 +51,7 @@ class Beranda extends CI_Controller {
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_POST, $field_string);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $field_string);
-		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 		$content = curl_exec($ch);
 		curl_close($ch);
@@ -80,17 +81,16 @@ class Beranda extends CI_Controller {
 		];
 		$exec = $this->mcore->store('bukutamu', $data);
 
-		if($exec === FALSE){
+		if ($exec === FALSE) {
 			http_response_code(500);
 			echo json_encode(['code' => 500]);
 			exit;
-		}else{
+		} else {
 			http_response_code(200);
 			echo json_encode(['code' => 200]);
 			exit;
 		}
 	}
-
 }
 
 /* End of file Beranda.php */

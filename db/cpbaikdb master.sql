@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql php 5.4.16
+ Source Server         : Laragon MySql
  Source Server Type    : MySQL
  Source Server Version : 50539
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50539
  File Encoding         : 65001
 
- Date: 28/02/2020 14:39:43
+ Date: 24/08/2020 10:05:10
 */
 
 SET NAMES utf8mb4;
@@ -36,7 +36,7 @@ CREATE TABLE `admin`  (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'admin', 'a2bd164b1dab1d817bacc5793197f9b3a275e1bb', 'Master Admin', 'aktif', 0, '2020-02-18 11:58:31', '2020-02-28 10:16:18');
+INSERT INTO `admin` VALUES (1, 'admin', '74d6d87e735fa557fbc1119c5f93b3ee58c34d39', 'Master Admin', 'aktif', 0, '2020-02-18 11:58:31', '2020-08-24 09:40:01');
 INSERT INTO `admin` VALUES (2, 'adam', '452cca1473e9f817c787aaafb693afa6d97c68cb', 'Adam PM', 'tidak aktif', 1, '2020-02-25 00:39:31', NULL);
 
 -- ----------------------------
@@ -53,7 +53,13 @@ CREATE TABLE `anggota`  (
   `created_date` datetime NULL DEFAULT NULL,
   `last_login` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of anggota
+-- ----------------------------
+INSERT INTO `anggota` VALUES (6, '10201003000815', 'adc1d79deedda828157c13e6b5ccd369a5c28a49', 'EUIS PUJASARI', 'POHON PINANG', 'aktif', '2020-03-10 14:17:09', '2020-03-10 14:21:15');
+INSERT INTO `anggota` VALUES (7, '80020282000818', '44152bd7bc3a175e6506f18e6350bf7d3d1965b3', 'ANI', 'DANAU TAMBARA', 'aktif', '2020-04-14 10:12:39', '2020-04-14 10:12:39');
 
 -- ----------------------------
 -- Table structure for berita
@@ -72,7 +78,7 @@ CREATE TABLE `berita`  (
   `nama_karyawan` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `date_karyawan` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of berita
@@ -85,6 +91,7 @@ INSERT INTO `berita` VALUES (5, 'GATHERING KSPPS BAIK', 'Menambah Kekompakan dan
 INSERT INTO `berita` VALUES (6, 'PELATIHAN DASAR AKAD-AKAD SYARIAH', 'Untuk meningkatkan dan menguatkan pemahaman akan akad-akad syariah dalam praktek transaksi lembaga keuangan syariah, KSPPS mengadakan Pelatihan dasar Akad Syariah bagi seluruh karyawan baru terutama', '4cbcaf74b2cdb222fce146f989511ff9.png', 'aktif', 1, 'Master Admin', '2020-02-27 14:56:42', NULL, NULL, NULL);
 INSERT INTO `berita` VALUES (7, 'BAIK BERBAGI', 'Berbagi Bersama Masjid Jami Nurul Amal Ciaruteun Ilir', 'd20d621ea5e86e2a09b465a444eb1a2a.png', 'aktif', 1, 'Master Admin', '2020-02-27 14:57:26', NULL, NULL, NULL);
 INSERT INTO `berita` VALUES (8, 'BAIK, Penyalur Kredit UMI Jabar Terbaik', '<p>Koperasi Baytul Ikhtiar menerima penghargaan dari Kementrian Koperasi Indonesia sebagai salah satu penyalur program krdeit UMI untuk masyarakat usaha kecil dan menengah<br></p>', '5f76170fa2f1059d23a8b0b1cc7399b3.jpeg', 'aktif', 1, 'Master Admin', '2020-02-27 14:58:04', NULL, NULL, NULL);
+INSERT INTO `berita` VALUES (9, 'test', '<p>saifbiasbsabbsa</p><br />\r\n<p><img src=\"https://baytulikhtiar.com/assets/img/baik_logo2.png\" alt=\"\" width=\"100\" height=\"100\" /></p>', 'default.png', 'aktif', 1, 'Master Admin', '2020-08-05 09:39:40', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for bukutamu
@@ -172,6 +179,24 @@ CREATE TABLE `profile`  (
 INSERT INTO `profile` VALUES (1, 'PRODUK DAN LAYANAN', 'Sesuai nama dan badan hukum nya sebagai KSPPS ( Koperasi Simpan Pinjam Pembiayaan), Produk utama KSPPS BAIK adalah SImpanan dan Pembiayaan  Produk Simpanan di KSPPS BAIK meliputi : Simpanan Pokok, Simpanan Wajib, Simpanan Sukarela dan Simpanan Berjangka / Simpanan Berencana  ', '2399c4989c98da8e0107fb7a1468342e.png', 1, 'Master Admin', '2020-02-24 16:08:47');
 INSERT INTO `profile` VALUES (2, 'BAIK GRAFIS STORY', 'Berawal pada semangat perjuangan untuk melakukan perbaikan kondisi masyarakat yang semakin mengalami kesulitan ekonomi di wilayah kabupaten bogor pd tahun 1990,  Tokoh masyarakat jawabarat sekaligus ulama dan pahlawan nasional KH Sholeh Iskandar berinisiatif untuk melakukan sebuah gerakan pemberdayaan .... ', '9d1e6e4d0df688f98f9d483c311200de.jpg', 1, 'Master Admin', '2020-02-24 16:08:47');
 INSERT INTO `profile` VALUES (3, 'PEREMPUAN DAN KOMITMEN KELOMPOK	', 'Koperasi Simpan Pinjam Pembiayaan Baytul Ikhtiar ( KSPPS BAIK) adalah lembaga keuangan mikro syariah berbasis komunitas perempuan dengan pola layanan kelompok Grameen Bank.  Resmi berbadan hukum koperasi pada tahun 2008, KSPPS BAIK terus memperluas jangkauan wilayah layanan ', '2ba22d5fd48f4790a080db7d72caf25b.png', 1, 'Master Admin', '2020-02-24 16:08:47');
+
+-- ----------------------------
+-- Table structure for slideshow
+-- ----------------------------
+DROP TABLE IF EXISTS `slideshow`;
+CREATE TABLE `slideshow`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `banner_path` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of slideshow
+-- ----------------------------
+INSERT INTO `slideshow` VALUES (1, 'a730309f00d22c272574574f50eede53.jpg');
+INSERT INTO `slideshow` VALUES (2, '025ce41410075b22d81c3f8b59d104e5.jpg');
+INSERT INTO `slideshow` VALUES (3, '360e7f386e6f5718fd48a5c28458fb79.jpg');
+INSERT INTO `slideshow` VALUES (4, '63347959c491479062bb1a75aeb68127.jpg');
 
 -- ----------------------------
 -- Table structure for tentang

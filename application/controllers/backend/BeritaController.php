@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class BeritaController extends CI_Controller {
+class BeritaController extends CI_Controller
+{
 
 	public function __construct()
 	{
@@ -20,11 +21,11 @@ class BeritaController extends CI_Controller {
 		$data['tipe_filter']           = NULL;
 		$data['kata_filter']           = NULL;
 
-		if($this->input->get('status_filter') != NULL){
+		if ($this->input->get('status_filter') != NULL) {
 			$limit  = 10;
 			$offset = 0;
 
-			if($this->input->get('per_page')){
+			if ($this->input->get('per_page')) {
 				$offset = $this->input->get('per_page');
 			}
 
@@ -85,11 +86,13 @@ class BeritaController extends CI_Controller {
 
 	public function store()
 	{
+		$url            = 'backend/berita/index?status_filter=semua&admin_karyawan_filter=semua&tipe_filter=judul&kata_filter=&filter=';
 		$judul          = $this->input->post('judul');
 		$isi            = nl2br($this->input->post('isi'));
 		$id_admin       = $this->session->userdata('id');
 		$username_admin = $this->session->userdata('username');
 		$nama_admin     = $this->session->userdata('nama');
+		$flag_msg       = 'Create berita berhasil';
 
 		$data = [
 			'judul'      => $judul,
@@ -100,24 +103,22 @@ class BeritaController extends CI_Controller {
 			'date_admin' => date('Y-m-d H:i:s')
 		];
 		$exec = $this->mberita->insert_berita('berita', $data);
-		if($exec === TRUE){
-			$code = 200;
-		}else{
-			$code = 500;
+		if ($exec) {
+			$this->session->set_flashdata('flag', $flag_msg);
+			redirect($url);
+		} else {
+			show_error('Terjadi kesalahan dengan Database, silahkan coba kembali', 500, 'Oops...');
 		}
-
-		echo json_encode(compact('code', 'isi'));
-		exit;
 	}
 
 	public function show($id)
 	{
 		$arrs = $this->mcore->get('berita', '*', ['id' => $id], NULL, 'ASC', NULL, NULL);
 
-		if($arrs->num_rows() == 0){
+		if ($arrs->num_rows() == 0) {
 			$code   = 500;
 			$result = NULL;
-		}else{
+		} else {
 			$code         = 200;
 			$data['arrs'] = $arrs;
 			$result       = $this->load->view('admin/berita/modal', $data, TRUE);
@@ -153,10 +154,12 @@ class BeritaController extends CI_Controller {
 
 	public function update()
 	{
+		$url        = 'backend/berita/index?status_filter=semua&admin_karyawan_filter=semua&tipe_filter=judul&kata_filter=&filter=';
 		$id         = $this->input->post('id');
 		$judul      = $this->input->post('judul');
 		$isi        = nl2br($this->input->post('isi'));
 		$prev_image = $this->input->post('prev_image');
+		$flag_msg   = 'Update berita berhasil';
 
 		$data = [
 			'judul'      => $judul,
@@ -164,14 +167,12 @@ class BeritaController extends CI_Controller {
 			'flag_aktif' => 'tidak aktif',
 		];
 		$exec = $this->mberita->update_berita('berita', $data, $id, $prev_image);
-		if($exec === TRUE){
-			$code = 200;
-		}else{
-			$code = 500;
+		if ($exec) {
+			$this->session->set_flashdata('flag', $flag_msg);
+			redirect($url);
+		} else {
+			show_error('Terjadi kesalahan dengan Database, silahkan coba kembali', 500, 'Oops...');
 		}
-
-		echo json_encode(compact('code', 'isi'));
-		exit;
 	}
 
 	public function destroy($id)
@@ -179,10 +180,10 @@ class BeritaController extends CI_Controller {
 		$url  = $_SERVER['HTTP_REFERER'];
 		$exec = $this->mcore->delete('berita', ['id' => $id]);
 
-		if($exec){
+		if ($exec) {
 			$this->session->set_flashdata('delete', 'Delete Berhasil');
-			redirect($url,'refresh');
-		}else{
+			redirect($url, 'refresh');
+		} else {
 			show_error('Terjadi kesalahan dengan Database, silahkan coba kembali', 500, 'Oops...');
 		}
 		exit;
@@ -191,25 +192,24 @@ class BeritaController extends CI_Controller {
 	public function flag($flag, $id)
 	{
 		$url = $_SERVER['HTTP_REFERER'];
-		if($flag == 1){
+		if ($flag == 1) {
 			$flag_msg = 'Aktifkan berita berhasil';
 			$object = ['flag_aktif' => 'aktif'];
-		}elseif($flag == 0){
+		} elseif ($flag == 0) {
 			$flag_msg = 'Non Aktifkan berita berhasil';
 			$object = ['flag_aktif' => 'tidak aktif'];
 		}
 
 		$exec = $this->mcore->update('berita', $object, ['id' => $id]);
 
-		if($exec){
+		if ($exec) {
 			$this->session->set_flashdata('flag', $flag_msg);
 			redirect($url);
-		}else{
+		} else {
 			show_error('Terjadi kesalahan dengan Database, silahkan coba kembali', 500, 'Oops...');
 		}
 		exit;
 	}
-
 }
 
 /* End of file BeritaController.php */

@@ -20,8 +20,8 @@
 				</div>
 			</li>
 			<!-- END SIDEBAR TOGGLER BUTTON -->
-			<li class="nav-item start <?=($uri2 == 'dashboard')? 'active' :'';?>">
-				<a href="<?=base_url('karyawan/dashboard');?>" class="nav-link nav-toggle">
+			<li class="nav-item start <?= ($uri2 == 'dashboard') ? 'active' : ''; ?>">
+				<a href="<?= base_url('karyawan/dashboard'); ?>" class="nav-link nav-toggle">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard </span>
 				</a>
@@ -29,20 +29,20 @@
 			<li class="heading">
 				<h3 class="uppercase">Berita</h3>
 			</li>
-			<li class="nav-item <?=($uri2 == 'berita')? 'active' :'';?>">
+			<li class="nav-item <?= ($uri2 == 'berita') ? 'active' : ''; ?>">
 				<a href="javascript:;" class="nav-link nav-toggle">
 					<i class="fa fa-fw fa-newspaper-o"></i>
 					<span class="title">Manage Berita</span>
 					<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
-					<li class="nav-item <?=($uri2 == 'berita' && $uri3 == 'create')? 'active' :'';?>">
-						<a href="<?=site_url();?>karyawan/berita/create" class="nav-link ">
+					<li class="nav-item <?= ($uri2 == 'berita' && $uri3 == 'create') ? 'active' : ''; ?>">
+						<a href="<?= site_url(); ?>karyawan/berita/create" class="nav-link ">
 							<span class="title">Tambah Berita</span>
 						</a>
 					</li>
-					<li class="nav-item <?=($uri2 == 'berita' && $uri3 == 'index')? 'active' :'';?>">
-						<a href="<?=site_url();?>karyawan/berita/index" class="nav-link ">
+					<li class="nav-item <?= ($uri2 == 'berita' && $uri3 == 'index') ? 'active' : ''; ?>">
+						<a href="<?= site_url(); ?>karyawan/berita/index?status_filter=semua&tipe_filter=judul&kata_filter=&filter=" class="nav-link ">
 							<span class="title">List Berita</span>
 						</a>
 					</li>
@@ -60,12 +60,12 @@
 				</a>
 				<ul class="sub-menu">
 					<li class="nav-item  ">
-						<a href="<?=site_url();?>karyawan/kisah/create" class="nav-link ">
+						<a href="<?= site_url(); ?>karyawan/kisah/create" class="nav-link ">
 							<span class="title">Tambah Kisah</span>
 						</a>
 					</li>
 					<li class="nav-item  ">
-						<a href="<?=site_url();?>karyawan/kisah/index" class="nav-link ">
+						<a href="<?= site_url(); ?>karyawan/kisah/index" class="nav-link ">
 							<span class="title">List Kisah</span>
 						</a>
 					</li>
