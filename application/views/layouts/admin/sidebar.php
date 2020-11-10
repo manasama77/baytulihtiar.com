@@ -95,7 +95,7 @@
 			<li class="nav-item">
 				<a href="<?= site_url('backend/slide/index'); ?>" class="nav-link">
 					<i class="fa fa-fw fa-users"></i>
-					<span class="title">Slide Show</span>
+					<span class="title">Banner</span>
 				</a>
 			</li>
 			<li class="heading">

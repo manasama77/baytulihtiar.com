@@ -4,16 +4,16 @@
 	<div class="page-bar">
 		<ul class="page-breadcrumb">
 			<li>
-				<a href="<?= site_url('backend/slide/index'); ?>">Slide Show</a>
+				<a href="<?= site_url('backend/slide/index'); ?>">Banner</a>
 				<i class="fa fa-circle"></i>
-				<a href="javascript:;">Manage Slide Show</a>
+				<a href="javascript:;">Manage Banner</a>
 			</li>
 		</ul>
 	</div>
 	<!-- END PAGE BAR -->
 	<!-- BEGIN PAGE TITLE-->
-	<h1 class="page-title"> Slide Show <i class="fa fa-fw fa-angle-right"></i>
-		<small>Manage Slide Show</small>
+	<h1 class="page-title"> Banner <i class="fa fa-fw fa-angle-right"></i>
+		<small>Manage Banner</small>
 	</h1>
 	<!-- END PAGE TITLE-->
 	<!-- END PAGE HEADER-->
@@ -23,7 +23,7 @@
 			<div class="portlet box blue-hoki ">
 				<div class="portlet-title">
 					<div class="caption">
-						<i class="fa fa-users"></i>Data Slide Show
+						<i class="fa fa-users"></i>Data Banner
 					</div>
 				</div>
 				<div class="portlet-body">
@@ -91,7 +91,7 @@
 			<div class="portlet box blue-hoki ">
 				<div class="portlet-title">
 					<div class="caption">
-						<i class="fa fa-user"></i>Tambah Slide Show
+						<i class="fa fa-user"></i>Tambah Banner
 					</div>
 				</div>
 				<div class="portlet-body">
@@ -101,7 +101,7 @@
 							<input type="file" class="form-control" id="banner_path" name="banner_path" required>
 						</div>
 						<div class="form-group">
-							<button type="submit" id="submit" class="btn btn-primary btn-block">Tambah Slide Show</button>
+							<button type="submit" id="submit" class="btn btn-primary btn-block">Tambah Banner</button>
 						</div>
 					</form>
 				</div>

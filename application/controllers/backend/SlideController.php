@@ -13,7 +13,7 @@ class SlideController extends CI_Controller
 
   public function index()
   {
-    $data['title']   = 'Slide Show Management';
+    $data['title']   = 'Banner Management';
     $data['content'] = 'slide/index';
     $data['vitamin'] = 'admin_slide_vitamin';
 
@@ -110,7 +110,7 @@ class SlideController extends CI_Controller
 
     echo json_encode([
       'code'  => $code,
-      'judul' => 'Edit Slide',
+      'judul' => 'Edit Banner',
       'data'  => $result
     ]);
     exit;

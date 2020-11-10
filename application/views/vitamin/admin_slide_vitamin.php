@@ -47,7 +47,7 @@
 						Swal.fire({
 							position: 'center',
 							icon: 'success',
-							title: 'Tambah Slide Show Berhasil',
+							title: 'Tambah Banner Berhasil',
 							showConfirmButton: false,
 							timer: 1500
 						}).then(function() {
